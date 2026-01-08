@@ -196,7 +196,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
   
-  // Headers CORS e CSP para permitir Meta Pixel
+  // Headers CORS para permitir acesso da plataforma Lasy
   async headers() {
     return [
       {
@@ -217,18 +217,6 @@ const nextConfig: NextConfig = {
           {
             key: 'Access-Control-Allow-Credentials',
             value: 'true'
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net",
-              "img-src 'self' data: https: https://www.facebook.com",
-              "connect-src 'self' https://connect.facebook.net https://www.facebook.com",
-              "style-src 'self' 'unsafe-inline'",
-              "font-src 'self' data:",
-              "frame-src 'self'",
-            ].join('; ')
           }
         ]
       }
