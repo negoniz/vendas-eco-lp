@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: " - Economize até 20% de Diesel no Seu Caminhão",
+  title: "Ecodiffusore - Economize até 20% de Diesel no Seu Caminhão",
   description: "Tecnologia aprovada em laudo técnico que otimiza a combustão, melhora o torque e reduz o consumo real de diesel. Economia de 5% a 20% comprovada.",
 };
 
@@ -29,9 +29,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* Meta Pixel Code - Script completo inline para garantir execução imediata */}
+        {/* Meta Pixel Code - Carregamento prioritário */}
         <Script
-          id="meta-pixel"
+          id="meta-pixel-base"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -43,6 +43,14 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
+            `,
+          }}
+        />
+        <Script
+          id="meta-pixel-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
               fbq('init', '2229206804265103');
               fbq('track', 'PageView');
             `,
