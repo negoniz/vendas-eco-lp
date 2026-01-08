@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ecodiffusore - Economize até 20% de Diesel no Seu Caminhão",
+  title: " - Economize até 20% de Diesel no Seu Caminhão",
   description: "Tecnologia aprovada em laudo técnico que otimiza a combustão, melhora o torque e reduz o consumo real de diesel. Economia de 5% a 20% comprovada.",
 };
 
